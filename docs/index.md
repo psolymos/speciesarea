@@ -115,3 +115,38 @@ will return
 }
 ```
 
+# Structure
+
+```
+inst
+|--sardata
+   |
+   |--paper01
+   |  |--study01
+   |  |  |--sdata.json # study level attributes
+   |  |  |--idata.json # island level attributes
+   |  |
+   |  |--study02
+   |  |  |--sdata.json
+   |  |  |--idata.json
+   |  |
+   |  |--citation.bib # paper level attributes (citation info)
+   |
+   |--paper02
+   |  |--study01
+   |  |  |--sdata.json
+   |  |  |--idata.json # replicate=1 if only one idata*.json file found
+   |  |
+   |  |--study02
+   |  |  |--sdata.json
+   |  |  |--idata1.json # replicate 1
+   |  |  |--idata2.json # replicate 2
+   |  |
+   |  |--citation.bib # paper level attributes (citation info)
+   |
+   [...other papers/studies...]
+   |
+   |--study.json # study level variable definitions
+   |--island.json # island level variable definitions
+```
+
