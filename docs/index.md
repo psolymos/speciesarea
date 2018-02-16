@@ -124,7 +124,7 @@ inst
    |--paper01
    |  |--study01
    |  |  |--sdata.json # study level attributes
-   |  |  |--idata.json # island level attributes
+   |  |  |--idata.json # island level data (replicate=1 if not stated)
    |  |
    |  |--study02
    |  |  |--sdata.json
@@ -135,12 +135,12 @@ inst
    |--paper02
    |  |--study01
    |  |  |--sdata.json
-   |  |  |--idata.json # replicate=1 if only one idata*.json file found
+   |  |  |--idata.json # replicate=1 if only one idata-<n>.json file found
    |  |
    |  |--study02
    |  |  |--sdata.json
-   |  |  |--idata1.json # replicate 1
-   |  |  |--idata2.json # replicate 2
+   |  |  |--idata-1.json # replicate 1
+   |  |  |--idata-2.json # replicate 2
    |  |
    |  |--citation.bib # paper level attributes (citation info)
    |
@@ -150,3 +150,7 @@ inst
    |--island.json # island level variable definitions
 ```
 
+In jekyll:
+
+* use `none` as permalink style (`/:categories/:title.html`) paper-study-replicate as title and `sardata` as category (there might be `blog` etc later), put files into `/sardata/_posts`
+* use paper/study/replicate & study level variables as tags: searchable
